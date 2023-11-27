@@ -7,7 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AddPage extends BasePage {
 
-
+    /** Created AddPage for Add Module, added all fo the webElement of Add Module to here
+     implemented Page Object Model */
     public AddPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }

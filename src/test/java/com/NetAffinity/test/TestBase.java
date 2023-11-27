@@ -14,6 +14,11 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
+    /**
+    TestBase class is used for setting common processes that used before and after from test methods.
+    This provides less code and easy to maintain.
+     */
+
     //for starting and building reports
     protected ExtentReports report;
     // to create HTML report file
@@ -21,8 +26,10 @@ public class TestBase {
     //to define a  test steps
     protected static ExtentTest extentLogger;
 
+    // to create logger object for using log4j
     Logger logger = LogManager.getLogger(this.getClass());
 
+    // this annotation will be implemented before each method
     @BeforeMethod
     public void setUp() {
 
@@ -50,7 +57,7 @@ public class TestBase {
         report.setSystemInfo("OS", System.getProperty("os.name"));
     }
 
-
+    // this annotation will be implemented before each method
     @AfterMethod
     public void tearDown() {
         BrowserUtils.getScreenshot("Test Result");

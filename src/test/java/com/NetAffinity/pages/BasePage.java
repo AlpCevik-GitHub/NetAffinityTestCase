@@ -9,8 +9,10 @@ import java.util.List;
 
 public abstract class BasePage {
 
-    /*
-    In this class we will store WebElements common to all pages
+    /**
+    In this class we will store WebElements common to all pages,
+    and also we can create common methods if needed.
+    This BasePage is inherited by other page class in order to have less code and more maintainability.
      */
 
     public BasePage(){
