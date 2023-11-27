@@ -1,0 +1,66 @@
+ instructions on how to set up the automation project
+Step 1: Install Java
+Download and install Java:
+Visit Java's official website to download and install the latest version of Java Development Kit (JDK).
+Step 2: Install an Integrated Development Environment (IDE)
+Install IntelliJ IDEA . You can download IntelliJ IDEA from JetBrains.
+Step 3: Install Maven
+Download and install Maven:
+Visit Maven's official website to download and install Maven.
+Step 4: Set Up WebDriver
+Download WebDriver:
+Download the WebDriver executable for your preferred browser (e.g., ChromeDriver for Chrome, GeckoDriver for Firefox).
+Set up WebDriver:
+Place the WebDriver executable in a location accessible from your system's PATH.
+Step 5: Create a Maven Project
+Open your IDE:
+Open IntelliJ IDEA.
+Create a new Maven project:
+Use the IDE to create a new Maven project.
+Step 6: Project Structure
+Organize project structure:
+
+Create separate packages for pages, tests, utilities, and logs.
+
+NetAffinityTestCase
+│
+logs
+ └── automation-app
+Reports
+ └── ScreenShots
+src
+│
+└── test
+│    └── java
+│        └── com.NetAffinity
+│            ├── pages
+│            │    └── BasePage.java
+│            │    └── AddPage.java
+│            ├── test
+│            │    └── NetAffinityTest.java
+│            │    └── TestBase.java  
+│            └── utilities
+│                 └── BrowserUtils.java
+│                 └── ConfigurationReader.java
+│                 └── Driver.java
+│
+└── resources
+     └── log4j2.properties
+│        
+test-output
+  └── report.html
+ configuration.properties
+ pom.xml
+
+
+Step 7: Dependencies
+Add dependencies in pom.xml:
+Add dependencies for Selenium WebDriver,webdrivermanager, TestNG, Log4j, Extent Logger, to the pom.xml file.
+Step 8: Implement Page Object Model
+Creat a separate class for each web page using the POM.
+Implement the Singleton Design Pattern for WebDriver initialization.
+Step 9: Logging with Log4j
+Configure Log4j to handle logging in your project.
+Step 10: Extent Logger
+Integrate Extent Logger for enhanced test reporting.
+Step 11: Run Tests by using NetAffinityTest.java class.
