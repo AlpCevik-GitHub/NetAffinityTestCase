@@ -13,12 +13,13 @@ import org.testng.Assert;
 
 import org.testng.annotations.Test;
 
-
+// used log4j annotation @Slf4j to get logs
 @Slf4j
 public class NetAffinityTest extends TestBase {
 
 
-     /* in this class, we put test steps, @Test annotation is used to execute method
+     /*
+        in this class, we put test steps, @Test annotation is used to be able to run method
      */
 
     AddPage addPage = new AddPage();
@@ -53,16 +54,16 @@ public class NetAffinityTest extends TestBase {
         // click save button
         addPage.saveButton.click();
         // logs for log4j
-        logger.info("new account was created.");
+        logger.info("new account is created.");
         // logs for extent logger
-        extentLogger.info("new account was created.");
+        extentLogger.info("new account is created.");
         BrowserUtils.sleep(5);
         // get total accounts number for comparing
         actualAccountNumber = addPage.totalNumberOfAccount.size();
         // click delete button
         addPage.deleteButton.click();
-        logger.info("the account was deleted.");
-        extentLogger.info("the account was deleted.");
+        logger.info("the account is deleted.");
+        extentLogger.info("the account is deleted.");
 
         // used Explicit wait for catching pop up deletion message
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
@@ -76,9 +77,9 @@ public class NetAffinityTest extends TestBase {
         int expectedAccountNumber = addPage.totalNumberOfAccount.size();
         System.out.println("expectedAccountNumber = " + expectedAccountNumber);
         // To verify deletion we use TestNG Verification
-        Assert.assertEquals(actualAccountNumber - 1, expectedAccountNumber, "Account was not deleted!!!");
-        logger.info("Deletion was verified.");
-        extentLogger.info("Deletion was verified.");
+        Assert.assertEquals(actualAccountNumber - 1, expectedAccountNumber, "Account is not deleted!!!");
+        logger.info("Deletion is verified.");
+        extentLogger.info("Deletion is verified.");
         // Second verification with pop up message
         if (message.contains("Account deleted")) {
             System.out.println("Test Passed!!!");

@@ -35,7 +35,7 @@ public class TestBase {
 
 
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-        logger.info("go to open www.test01.netaffinity.com ");
+        logger.info("go to www.test01.netaffinity.com ");
         report = new ExtentReports();
         //create a report path
         String projectPath = System.getProperty("user.dir");
@@ -44,7 +44,7 @@ public class TestBase {
         //initialize the html reporter with the report path
         htmlReporter = new ExtentHtmlReporter(path);
         extentLogger = report.createTest("Net Affinity");
-        extentLogger.info("go to open www.test01.netaffinity.com");
+        extentLogger.info("go to  www.test01.netaffinity.com");
         //attach the html report to report object
         report.attachReporter(htmlReporter);
 
@@ -63,8 +63,8 @@ public class TestBase {
         BrowserUtils.getScreenshot("Test Result");
         Driver.closeDriver();
         report.flush();
-        logger.info("Browser was closed.");
-        extentLogger.info("Browser was closed.");
+        logger.info("Browser is closed.");
+        extentLogger.info("Browser is closed.");
     }
 
 
