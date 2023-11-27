@@ -1,0 +1,5 @@
+[INFO ] [1236] [2023-11-27 22:16:30.128] [main] [com.NetAffinity.test.NetAffinityTest] - "go to www.test01.netaffinity.com "
+[INFO ] [1236] [2023-11-27 22:16:43.171] [main] [com.NetAffinity.test.NetAffinityTest] - "new account is created."
+[INFO ] [1236] [2023-11-27 22:16:48.268] [main] [com.NetAffinity.test.NetAffinityTest] - "the account is deleted."
+[INFO ] [1236] [2023-11-27 22:16:53.901] [main] [com.NetAffinity.test.NetAffinityTest] - "Deletion is verified."
+[INFO ] [1236] [2023-11-27 22:16:54.892] [main] [com.NetAffinity.test.NetAffinityTest] - "Browser is closed."
