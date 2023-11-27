@@ -75,11 +75,11 @@ public class NetAffinityTest extends TestBase {
         // After deletion, get the remaining of account number
         int expectedAccountNumber = addPage.totalNumberOfAccount.size();
         System.out.println("expectedAccountNumber = " + expectedAccountNumber);
-
+        // To verify deletion we use TestNG Verification
         Assert.assertEquals(actualAccountNumber - 1, expectedAccountNumber, "Account was not deleted!!!");
         logger.info("Deletion was verified.");
         extentLogger.info("Deletion was verified.");
-
+        // Second verification with pop up message
         if (message.contains("Account deleted")) {
             System.out.println("Test Passed!!!");
         } else {
